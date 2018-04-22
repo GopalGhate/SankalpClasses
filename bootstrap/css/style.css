@@ -1,0 +1,47 @@
+.body-container{
+	width: 100%;
+	height: 100%;
+}
+.navbar-row{
+	margin-bottom: -20px;
+	/*background-color: #bce8f1;*/
+}
+
+.nav-color{
+	background: #d9edf7;
+}
+
+.page_div{
+	height: 100%
+}
+
+.navbar-brand{
+	align-content: center;
+	font-size: 30px;
+	padding-left:
+	color: #000000; 
+}
+
+.nav-border{
+	border: 1px solid black;
+	padding-right:0px;
+}
+
+.heading{
+	background-color: #d9bfe8;
+	border: 1px solid black;
+	height: 80px;
+}
+
+a{
+	color: #000000;
+}
+
+.panel-heading{
+	text-align:center;
+}
+/*#navbrand{
+
+	padding-left: 500px;
+
+}*/

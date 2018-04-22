@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<script type="text/javascript" src="JS/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="JS/style.js"></script>
+	<title>Maheshwari Classess</title>
+	
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/style.css">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+	<div class="container body-container">
+		<!-- A grey horizontal navbar that becomes vertical on small screens -->
+		<div class="row navbar-row">
+			
+			<nav class="navbar navbar-expand-sm bg-light nav-color">
+				<div id="navbrand col-md-2">
+					<a class="navbar-brand" href="#">Maheshwari</a>
+				</div>
+				<!-- <div> -->
+					<!-- top navigation bar menu-->
+					<div class="nav pull-right">
+						<div class="dropdown col-md-10 justify-content-right">
+						  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
+						  <span class="caret"></span></button>
+						  <ul class="dropdown-menu">
+						  	<li class="nav-item">
+						  		<a id="student_registration" href="#">Student Registration</a>
+						  	</li> 
+						  	<li class="nav-item">
+						  		<a id="data" href="#">Student Data</a>
+						  	</li> 
+						  	<li class="nav-item">
+						  		<a href="#" id="exam_creation">Exam Creation</a>
+						  	</li> 
+						  	<li class="nav-item">
+						  		<a href="#" id="a_question">Add Questions</a>
+						  	</li> 
+						  	<li class="nav-item">
+						  		<a href="#" id="result1">Results</a>
+						  	</li> 
+						  	<li class="nav-item">
+						  		<a href="#" id="fee">Fee Management</a>
+						  	</li> 
+						  </ul>
+						</div>
+
+						<!-- <ul class="nav nav-tabs">
+							<li class="nav-item">
+								<a id="student_registration" href="#">Student Registration</a>
+							</li> 
+							<li class="nav-item">
+								<a id="data" href="#">Student Data</a>
+							</li> 
+							<li class="nav-item">
+								<a href="#" id="exam_creation">Exam Creation</a>
+							</li> 
+							<li class="nav-item">
+								<a href="#" id="a_question">Add Questions</a>
+							</li> 
+							<li class="nav-item">
+								<a href="#" id="result1">Results</a>
+							</li> 
+							<li class="nav-item">
+								<a href="#" id="fee">Fee Management</a>
+							</li> 
+						</ul> -->
+					</div>
+				<!-- </div> -->
+			</nav>
+
+		</div>
+		<!-- Side navigation bar -->
+		<!-- <div class="row" style="">
+			<div class="col-md-2 nav-color nav-border side-bar" style="height: 100%">
+				<ul class="nav">
+					<li class="nav-tabs">
+						<a href="#">Student Registration</a>
+					</li> 
+					<li class="nav-tabs">
+						<a href="#">Student Data</a>
+					</li> 
+					<li class="nav-tabs">
+						<a href="#">Exam Creation</a>
+					</li> 
+					<li class="nav-tabs">
+						<a href="#">Add Questions</a>
+					</li> 
+					<li class="nav-tabs">
+						<a href="#">Results</a>
+					</li> 
+					<li class="nav-tabs">
+						<a href="#">Fee Management</a>
+					</li> 
+				</ul>
+			</div> -->
+
+			<div class="col-md-12 ">
+						 
+				 <div class="col-md-12" style="/*height: 90%*/">
+				 	<!-- Student Registration -->
+				 	<div class="container col-md-10 col-md-offset-1" id="registration" style="padding-top: 50px">
+				 		<div class="panel panel-info">
+				 			<div class="panel-heading" id="register_panel">Register a Student</div>
+				 			<div class="panel-body">
+				 				<form class="form-horizontal" action="/action_page.php">
+				 					<div class="form-group">
+				 						<label class="control-label col-sm-4" for="firstname">First Name:</label>
+				 						<div class="col-sm-4">
+				 							<input required type="text" class="form-control" id="firstname" placeholder="Enter first name" >
+				 						</div>
+				 					</div>
+				 					<div class="form-group">
+				 						<label class="control-label col-sm-4" for="midlename">Midle Name:</label>
+				 						<div class="col-sm-6"> 
+				 							<input required type="text" class="form-control" id="midlename" placeholder="Enter midle name">
+				 						</div>
+				 					</div>
+				 					<div class="form-group">
+				 						<label class="control-label col-sm-4" for="lastname">Last Name:</label>
+				 						<div class="col-sm-6"> 
+				 							<input required type="text" class="form-control" id="lastname" placeholder="Enter last name">
+				 						</div>
+				 					</div>
+				 					<div class="form-group">
+				 						<label class="control-label col-sm-4" for="class">Class:</label>
+				 						<div class="col-sm-6">
+				 							<select class="form-control" id="class">
+				 								<option>1</option>
+				 								<option>2</option>
+				 								<option>3</option>
+				 								<option>4</option>
+				 							</select>
+				 						</div>
+				 					</div>
+				 					<div class="form-group">
+				 						<label class="control-label col-sm-4" for="parent_mobile">Parent's Mobile Number:</label>
+				 						<div class="col-sm-6"> 
+				 							<input required type="text" class="form-control" id="parent_mobile" placeholder="Enter mobile number">
+				 						</div>
+				 					</div>
+				 					<div class="form-group">
+				 						<label class="control-label col-sm-4" for="mobile">Student's Mobile Number:</label>
+				 						<div class="col-sm-6"> 
+				 							<input required type="text" class="form-control" id="mobile" placeholder="Enter mobile number">
+				 						</div>
+				 					</div>
+				 					<div class="form-group">
+				 						<label class="control-label col-sm-4" for="email">Email:</label>
+				 						<div class="col-sm-6"> 
+				 							<input required type="email" class="form-control" id="email" placeholder="Enter email">
+				 						</div>
+				 					</div>
+				 					<div class="form-group"> 
+				 						<div class="col-sm-offset-4 col-sm-6">
+				 							<button type="submit" class="btn btn-primary">Submit</button>
+				 						</div>
+				 					</div>
+				 				</form>
+				 			</div>
+				 			<!-- <div class="panel-footer">Panel Footer</div> -->
+				 		</div>
+				 	</div> <!-- Student Registration end -->
+
+				 	<!-- Student Data -->
+				 	<div class="container col-md-10 col-md-offset-1" id="student_data" style="padding-top: 50px">
+				 		<div class="panel panel-info">
+				 			<div class="panel-heading" id="data_panel">Student Data</div>
+				 			<div class="panel-body">
+				 				<form class="form-horizontal" action="/action_page.php">
+				 					<div class="form-group">
+				 						<label class="control-label col-sm-4" for="class_student_data">Class:</label>
+				 						<div class="col-sm-6">
+				 							<select class="form-control" id="class_student_data">
+				 								<option>1112121212</option>
+				 								<option>12</option>
+				 								<option>10</option>
+				 							</select>
+				 						</div>
+				 					</div>
+
+				 					<div class="form-group">
+				 						<label class="control-label col-sm-4" for="student_name">Student:</label>
+				 						<div class="col-sm-6">
+				 							<select class="form-control" id="student_name">
+				 								<option>Priyanka</option>
+				 								<option>Gopal</option>
+				 								<option>Gokul</option>
+				 								<option>Sweety</option>
+				 							</select>
+				 						</div>
+				 					</div>
+
+				 					<div class="form-group">
+				 						<label class="control-label col-sm-4" for="firstname">First Name:</label>
+				 						<div class="col-sm-4">
+				 							<input required type="text" class="form-control" id="firstname" placeholder="Enter first name">
+				 						</div>
+				 					</div>
+				 					<div class="form-group">
+				 						<label class="control-label col-sm-4" for="midlename">Midle Name:</label>
+				 						<div class="col-sm-6"> 
+				 							<input required type="text" class="form-control" id="midlename" placeholder="Enter midle name">
+				 						</div>
+				 					</div>
+				 					<div class="form-group">
+				 						<label class="control-label col-sm-4" for="lastname">Last Name:</label>
+				 						<div class="col-sm-6"> 
+				 							<input required type="text" class="form-control" id="lastname" placeholder="Enter last name">
+				 						</div>
+				 					</div>
+				 					<div class="form-group">
+				 						<label class="control-label col-sm-4" for="class">Class:</label>
+				 						<div class="col-sm-6">
+				 							<select class="form-control" id="class">
+				 								<option>1</option>
+				 								<option>2</option>
+				 								<option>3</option>
+				 								<option>4</option>
+				 							</select>
+				 						</div>
+				 					</div>
+				 					<div class="form-group">
+				 						<label class="control-label col-sm-4" for="parent_mobile">Parent's Mobile Number:</label>
+				 						<div class="col-sm-6"> 
+				 							<input required type="text" class="form-control" id="parent_mobile" placeholder="Enter mobile number">
+				 						</div>
+				 					</div>
+				 					<div class="form-group">
+				 						<label class="control-label col-sm-4" for="mobile">Student's Mobile Number:</label>
+				 						<div class="col-sm-6"> 
+				 							<input required type="text" class="form-control" id="mobile" placeholder="Enter mobile number">
+				 						</div>
+				 					</div>
+				 					<div class="form-group">
+				 						<label class="control-label col-sm-4" for="email">Email:</label>
+				 						<div class="col-sm-6"> 
+				 							<input required type="email" class="form-control" id="email" placeholder="Enter email">
+				 						</div>
+				 					</div>
+				 					<div class="form-group"> 
+				 						<div class="col-sm-offset-4 col-sm-6">
+				 							<button type="submit" class="btn btn-primary">Submit</button>
+				 						</div>
+				 					</div>
+				 				</form>
+				 			</div>
+				 			<!-- <div class="panel-footer">Panel Footer</div> -->
+				 		</div>
+				 	</div> <!-- Student Data end -->
+
+				 	<!-- Student Data start-->
+				 	<div class="container col-md-10 col-md-offset-1" id="examcreation" style="padding-top: 50px">
+				 		<div class="panel panel-info">
+				 			<div class="panel-heading">Create Exam</div>
+				 			<div class="panel-body">
+				 				<form class="form-horizontal" action="/action_page.php">
+				 					<div class="form-group">
+				 						<label class="control-label col-sm-4" for="email">Email:</label>
+				 						<div class="col-sm-6"> 
+				 							<input required type="email" class="form-control" id="email" placeholder="Enter email">
+				 						</div>
+				 					</div>
+				 					<div class="form-group">
+				 						<label class="control-label col-sm-4" for="class">Class:</label>
+				 						<div class="col-sm-6">
+				 							<select class="form-control" id="class">
+				 								<option>1</option>
+				 								<option>2</option>
+				 								<option>3</option>
+				 								<option>4</option>
+				 							</select>
+				 						</div>
+				 					</div>
+				 					<div class="form-group">
+				 						<label class="control-label col-sm-4" for="class">Subject:</label>
+				 						<div class="col-sm-6">
+				 							<select class="form-control" id="class">
+				 								<option>Math I</option>
+				 								<option>Math II</option>
+				 								<option>Physics</option>
+				 								<option>Chemistry</option>
+				 							</select>
+				 						</div>
+				 					</div>
+				 					
+				 					<div class="form-group">
+				 						<label class="control-label col-sm-4" for="parent_mobile">Number of Questions:</label>
+				 						<div class="col-sm-6"> 
+				 							<input required type="text" class="form-control" id="parent_mobile" placeholder="Enter number of questions">
+				 						</div>
+				 					</div>
+				 					<div class="form-group">
+				 						<label class="control-label col-sm-4" for="mobile">Exam Duration (minutes):</label>
+				 						<div class="col-sm-6"> 
+				 							<input required type="text" class="form-control" id="mobile" placeholder="Enter exam duration">
+				 						</div>
+				 					</div>
+
+				 					<div class="form-group">
+				 						<label class="control-label col-sm-4" for="class">Exam Status:</label>
+				 						<div class="col-sm-6">
+				 							<select class="form-control" id="class">
+				 								<option>Started</option>
+				 								<option>Not Started</option>
+				 								<option>Finished</option>
+				 							</select>
+				 						</div>
+				 					</div>
+				 					
+				 					<div class="form-group"> 
+				 						<div class="col-sm-offset-4 col-sm-6">
+				 							<button type="submit" class="btn btn-primary">Submit</button>
+				 						</div>
+				 					</div>
+				 				</form>
+				 			</div>
+				 			<!-- <div class="panel-footer">Panel Footer</div> -->
+				 		</div>
+				 	</div> <!-- Student Data end -->
+
+				 	<!-- Add Questions start-->
+				 	<div class="container col-md-10 col-md-offset-1" id="add_questions" style="padding-top: 50px">
+				 		<div class="panel panel-info">
+				 			<div class="panel-heading">Add Questions</div>
+				 			<div class="panel-body">
+				 				<form class="form-horizontal" action="/action_page.php">
+				 					<div class="form-group">
+				 						<label class="control-label col-sm-4" for="classQue">Class:</label>
+				 						<div class="col-sm-6">
+				 							<select class="form-control" id="classQue">
+				 								<option>11</option>
+				 								<option>12</option>
+				 								<option>10</option>
+				 							</select>
+				 						</div>
+				 					</div>
+
+				 					<div class="form-group">
+				 						<label class="control-label col-sm-4" for="classid">Class ID:</label>
+				 						<div class="col-sm-6">
+				 							<select class="form-control" id="classid">
+				 								<option>112</option>
+				 								<option>2234</option>
+				 								<option>3234</option>
+				 								<option>4423</option>
+				 							</select>
+				 						</div>
+				 					</div>
+				 					<div class="form-group">
+				 						<label class="control-label col-sm-4" for="examid">Exam ID:</label>
+				 						<div class="col-sm-6">
+				 							<select class="form-control" id="examid">
+				 								<option>123</option>
+				 								<option>123</option>
+				 								<option>123</option>
+				 								<option>123</option>
+				 							</select>
+				 						</div>
+				 					</div>
+				 					
+				 					<div class="form-group">
+				 						<label class="control-label col-sm-4" for="parent_mobile">Question Number:</label>
+				 						<div class="col-sm-6"> 
+				 							<input required type="text" class="form-control" id="parent_mobile" placeholder="Enter number of questions">
+				 						</div>
+				 					</div>
+				 					<div class="form-group">
+				 						<label class="control-label col-sm-4" for="question">Question:</label>
+				 						<div class="col-sm-6"> 
+				 							<input required type="text" class="form-control" id="question" placeholder="Enter Question">
+				 						</div>
+				 					</div>
+				 					<div class="form-group">
+				 						<label class="control-label col-sm-4" for="option1">Option 1:</label>
+				 						<div class="col-sm-6"> 
+				 							<input required type="text" class="form-control" id="option1" placeholder="Enter option 1">
+				 						</div>
+				 					</div>
+				 					<div class="form-group">
+				 						<label class="control-label col-sm-4" for="option2">Option 2:</label>
+				 						<div class="col-sm-6"> 
+				 							<input required type="text" class="form-control" id="option2" placeholder="Enter option 2">
+				 						</div>
+				 					</div>					 				
+				 					<div class="form-group">
+				 						<label class="control-label col-sm-4" for="option3">Option 3:</label>
+				 						<div class="col-sm-6"> 
+				 							<input required type="text" class="form-control" id="option3" placeholder="Enter option 3">
+				 						</div>
+				 					</div>
+				 					<div class="form-group">
+				 						<label class="control-label col-sm-4" for="option4">Option 4:</label>
+				 						<div class="col-sm-6"> 
+				 							<input required type="text" class="form-control" id="option4" placeholder="Enter option 4">
+				 						</div>
+				 					</div>
+				 					<div class="form-group">
+				 						<label class="control-label col-sm-4" for="answer">Answer:</label>
+				 						<div class="col-sm-6">
+				 							<select class="form-control" id="answer">
+				 								<option>123</option>
+				 								<option>123</option>
+				 								<option>123</option>
+				 								<option>123</option>
+				 							</select>
+				 						</div>
+				 					</div>
+				 					<div class="form-group"> 
+				 						<div class="col-sm-offset-4 col-sm-6">
+				 							<button type="submit" class="btn btn-primary">Submit</button>
+				 						</div>
+				 					</div>
+				 				</form>
+				 			</div>
+				 			<!-- <div class="panel-footer">Panel Footer</div> -->
+				 		</div>
+				 	</div> <!-- Add Questions end -->
+
+				 	<!-- Fee MAnagement start-->
+				 	<div class="container col-md-10 col-md-offset-1" id="fee_management" style="padding-top: 50px">
+				 		<div class="panel panel-info">
+				 			<div class="panel-heading">Fee Management</div>
+				 			<div class="panel-body">
+				 				<form class="form-horizontal" action="/action_page.php">
+				 					<div class="form-group">
+				 						<label class="control-label col-sm-4" for="class">Class:</label>
+				 						<div class="col-sm-6">
+				 							<select class="form-control" id="class">
+				 								<option>11</option>
+				 								<option>12</option>
+				 								<option>10</option>
+				 							</select>
+				 						</div>
+				 					</div>
+
+				 					<div class="form-group">
+				 						<label class="control-label col-sm-4" for="class">Student:</label>
+				 						<div class="col-sm-6">
+				 							<select class="form-control" id="class">
+				 								<option>Priyanka</option>
+				 								<option>Gopal</option>
+				 								<option>Gokul</option>
+				 								<option>Sweety</option>
+				 							</select>
+				 						</div>
+				 					</div>
+				 					<div class="form-group">
+				 						<label class="control-label col-sm-4" for="total_fee">Total Fees:</label>
+				 						<div class="col-sm-6"> 
+				 							<input required type="text" class="form-control" id="total_fee" placeholder="Enter total fee">
+				 						</div>
+				 					</div>
+				 					<div class="form-group">
+				 						<label class="control-label col-sm-4" for="paid">Paid Amount:</label>
+				 						<div class="col-sm-6"> 
+				 							<input required type="text" class="form-control" id="paid" placeholder="Enter paid amount">
+				 						</div>
+				 					</div>
+
+					 				<div class="form-group">
+				 						<label class="control-label col-sm-4" for="remaining">Remaining Amount:</label>
+				 						<div class="col-sm-6"> 
+				 							<input required type="text" class="form-control" id="remaining" placeholder="toatal - paid (need calculations)">
+				 						</div>
+				 					</div>
+				 					
+				 					<div class="form-group"> 
+				 						<div class="col-sm-offset-4 col-sm-6">
+				 							<button type="submit" class="btn btn-primary">Submit</button>
+				 						</div>
+				 					</div>
+				 				</form>
+				 			</div>
+				 			<!-- <div class="panel-footer">Panel Footer</div> -->
+				 		</div>
+				 	</div> <!-- Fee Management end -->
+
+				 	<!-- Results start-->
+				 	<div class="container col-md-10 col-md-offset-1" id="result" style="padding-top: 50px">
+				 		<div class="panel panel-info">
+				 			<div class="panel-heading">Results</div>
+				 			<div class="panel-body">
+				 				<form class="form-inline" action="/action_page.php">
+				 					<div class="form-group col-md-offset-3">
+				 						<label class="control-label" for="class">Class:</label>
+				 						<!-- <div class="col-sm-4"> -->
+				 							<select class="form-control" id="class">
+				 								<option>1112121212</option>
+				 								<option>12</option>
+				 								<option>10</option>
+				 							</select>
+				 						<!-- </div> -->
+				 					</div>
+
+				 					<div class="form-group col-md-offset-1">
+				 						<label class="control-label" for="class">Student:</label>
+				 						<!-- <div class="col-sm-6"> -->
+				 							<select class="form-control" id="class">
+				 								<option>Priyanka</option>
+				 								<option>Gopal</option>
+				 								<option>Gokul</option>
+				 								<option>Sweety</option>
+				 							</select>
+				 						<!-- </div> -->
+				 					</div>
+
+				 					<div class="col-md-12" style="padding-top: 20px">
+					 					<table class="table table-hover table-bordered" >
+					 					    <thead>
+					 					      <tr>
+					 					        <th>Subject</th>
+					 					        <th>Date</th>
+					 					        <th>Veiw Result</th>
+					 					      </tr>
+					 					    </thead>
+					 					    <tbody>
+					 					      <tr>
+					 					        <td>Math I</td>
+					 					        <td>12/04/2018</td>
+					 					        <td>links of results</td>
+					 					      </tr>
+					 					      <tr>
+					 					        <td>Math I</td>
+					 					        <td>12/04/2018</td>
+					 					        <td>links of results</td>
+					 					      </tr>
+					 					      <tr>
+					 					        <td>Math I</td>
+					 					        <td>12/04/2018</td>
+					 					        <td>links of results</td>
+					 					      </tr>
+					 					    </tbody>
+					 					</table>
+				 					</div>
+
+				 					<div class="col-md-12" style="padding-top: 20px">
+					 					<table class="table table-hover table-bordered" >
+					 					    <thead>
+					 					      <tr>
+					 					        <th>Number Of Questions</th>
+					 					        <th>Attempted Questions</th>
+					 					        <th>Correct Answers</th>
+					 					        <th>Wrong Answers</th>
+					 					        <th>Total</th>
+					 					      </tr>
+					 					    </thead>
+					 					    <tbody>
+					 					      <tr>
+					 					        <td>10</td>
+					 					        <td>10</td>
+					 					        <td>9</td>
+					 					        <td>1</td>
+					 					        <td>9</td>
+					 					      </tr>
+					 					      <tr>
+					 					        <td>10</td>
+					 					        <td>10</td>
+					 					        <td>9</td>
+					 					        <td>1</td>
+					 					        <td>9</td>
+					 					      </tr>
+					 					      <tr>
+					 					        <td>10</td>
+					 					        <td>10</td>
+					 					        <td>9</td>
+					 					        <td>1</td>
+					 					        <td>9</td>
+					 					      </tr>
+					 					    </tbody>
+					 					</table>
+				 					</div>
+				 				</form>
+				 			</div>
+				 			<!-- <div class="panel-footer">Panel Footer</div> -->
+				 		</div>
+				 	</div> <!-- Results end -->
+				 </div>
+
+
+			</div>
+		</div>
+	</div>
+</body>
+</html>
